@@ -1,34 +1,30 @@
 package travelkuy.view;
 
 import travelkuy.controller.TravelkuyController;
-import travelkuy.model.TravelkuyModel;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TravelkuyView {
 
-    private TravelkuyModel model;
-    private TravelkuyController controller;
-
-
     public void createView() {
-        controller = new TravelkuyController();
+        TravelkuyController controller = new TravelkuyController();
         Scanner in = new Scanner(System.in);
         boolean isRightInputValueInMainMenu = false;
         boolean isRightInputValueInThirdSubMenu = false;
-        boolean isRunning = true;
 
         int opt = 0;
 
-            while (!isRightInputValueInMainMenu || !controller.isValidOptionValueInMainMenu(opt)) {
-                try {
-
+            while (!isRightInputValueInMainMenu) {
+               while (opt!=4) {
+                    try {
+                        System.out.println();
                     System.out.println("==========SELAMAT DATANG DI TRAVELKUY==========");
                     System.out.println("Menu: ");
                     System.out.println("1. Lihat Promo Tiket Pesawat");
                     System.out.println("2. Pesan Tiket Pesawat");
                     System.out.println("3. Informasi Destinasi Wisata");
+                    System.out.println("4. Keluar");
                     System.out.println("Masukkan pilihan anda: ");
                     opt = in.nextInt();
                     isRightInputValueInMainMenu = true;
@@ -66,9 +62,9 @@ public class TravelkuyView {
                             break;
 
                         case 3:
-                            int opsi = 0;
+                            int opsi;
 
-                            while (!isRightInputValueInThirdSubMenu || !controller.isValidOptionValueInThirdSubMenu(opsi)) {
+                            while (!isRightInputValueInThirdSubMenu) {
                                 try {
 
                                     System.out.println("Temukan destinasi wisata di provinsi berikut ini: ");
@@ -101,23 +97,32 @@ public class TravelkuyView {
                                             controller.displayDestinasiWisata(5);
                                             break;
 
+                                        default:
+                                            System.out.println("Masukkan angka 1-5!");
+
                                     }
+
                                 } catch (InputMismatchException e) {
                                     in.next();
                                     System.out.println("Masukkan input berupa angka!\n");
                                 }
                             }
+                        case 4:
+                            System.out.println("Terima Kasih Telah Memakai Aplikasi Kami");
+                            break;
 
+                        default:
+                            System.out.println("Masukkan Angka 1-4!");
                     }
                 } catch (InputMismatchException e) {
                     in.next();
                     System.out.println("Masukkan input berupa angka!\n");
                 }
-
+            }
 
             }
 
-      
 
     }
 }
+
