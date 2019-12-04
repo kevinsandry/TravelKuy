@@ -48,16 +48,16 @@ public class TravelkuyView {
                                 phone = in.nextLine();
                             } while (!controller.isValidPhoneNumber(phone));
 
-                            while (!isRightInputValue || !controller.isValidOptionValueWhenSelectingTicket(pilihan)) {
+                           do {
                                 try {
                                     System.out.println("Pilihan Tiket   : ");
                                     pilihan = in.nextInt();
-                                    isRightInputValue = true;
+//                                    isRightInputValue = true;
                                 } catch (InputMismatchException e) {
                                     in.next();
                                     System.out.println("Masukkan input berupa angka\n");
                                 }
-                            }
+                             }while (!controller.isValidOptionValueWhenSelectingTicket(pilihan));
                             controller.pesanTiket(pilihan, name, phone);
                             break;
 
