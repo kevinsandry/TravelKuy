@@ -87,8 +87,8 @@ public class TravelkuyModel {
         wisataDiSumbar.put("Pantai Padang", "Pantai Padang atau populer dengan sebutan Taplau adalah sebuah pantai yang terletak di Kota Padang, Sumatra Barat. Pantai ini terletak pada kawasan padat " + "\n" +
                 "perkotaan di Kecamatan Padang Barat, dan membentang dari daerah Purus hingga muara Batang Arau.");
         wisataDiSumbar.put("Masjid Raya Sumatera Barat", "Masjid terbesar di Minangkabau ini, menjadi ikon baru bagi Kota Padang dalam menarik minat wisatawan untuk melakukan wisata religi. Arsitektur "  + "\n" +
-                "dan kemegahan Masjid Raya Sumatera Barat ini membuat setiap orang melihatnya, mengabdikannya dengan berfoto bersama. Bahkan akhir-akhir di momen mudik lebaran  ini, banyak parantau yang pulang " + "\n" +
-                "sengaja melewati jalur pusat kota demi ingin singgah di masjid megah tersebut.");
+                "dan kemegahan Masjid Raya Sumatera Barat ini membuat setiap orang melihatnya, mengabdikannya dengan berfoto bersama. Bahkan akhir-akhir di momen"+ "\n" +
+                "mudik lebaran  ini, banyak parantau yang pulang sengaja melewati jalur pusat kota demi ingin singgah di masjid megah tersebut.");
         
         //jabar
         wisataDiJabar.put("Gunung Tangkuban Perahu","Gunung Tangkuban Perahu merupakan salah satu situs wisata terkenal di Indonesia. Terletak di daerah Lembang, sekitar 20 kilometer di utara Kota Bandung, " +"\n" +
