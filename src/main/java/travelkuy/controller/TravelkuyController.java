@@ -108,26 +108,6 @@ public class TravelkuyController {
         }
     }
 
-    public boolean isValidOptionValueInMainMenu(int opt) {
-        String option = Integer.toString(opt);
-        if (option.matches("[1-3]*")) {
-            return true;
-        } else {
-            System.out.println("Masukkan angka 1-3"+"\n");
-            return false;
-        }
-    }
-
-    public boolean isValidOptionValueInThirdSubMenu(int opt) {
-        String option = Integer.toString(opt);
-        if (option.matches("[1-5]*")) {
-            return true;
-        } else {
-            System.out.println("Masukkan angka 1-5"+"\n");
-            return false;
-        }
-    }
-
     public boolean isValidOptionValueWhenSelectingTicket(int opt) {
         String option = Integer.toString(opt);
         if (option.matches("[1-6]*")) {
