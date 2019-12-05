@@ -62,9 +62,9 @@ public class TravelkuyView {
                             break;
 
                         case 3:
-                            int opsi;
+                            int opsi = 0;
 
-                            while (!isRightInputValueInThirdSubMenu) {
+                            while (!isRightInputValueInThirdSubMenu || opsi >5) {
                                 try {
 
                                     System.out.println("Temukan destinasi wisata di provinsi berikut ini: ");
@@ -97,9 +97,9 @@ public class TravelkuyView {
                                             controller.displayDestinasiWisata(5);
                                             break;
 
-                                        default:
-                                            System.out.println("Masukkan angka 1-5!");
-
+                                    }
+                                    if(opsi>5) {
+                                        System.out.println("Masukkan angka 1-5!");
                                     }
 
                                 } catch (InputMismatchException e) {
@@ -107,6 +107,7 @@ public class TravelkuyView {
                                     System.out.println("Masukkan input berupa angka!\n");
                                 }
                             }
+                            break;
                         case 4:
                             System.out.println("Terima Kasih Telah Memakai Aplikasi Kami");
                             break;
